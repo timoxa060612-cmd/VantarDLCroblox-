@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VESTA Mobile</title>
+    <style>
+        body {
+            background: #0f0f12;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .panel {
+            border: 1px solid #8c50ff;
+            padding: 25px;
+            border-radius: 12px;
+            width: 85%;
+            max-width: 350px;
+            background: #151518;
+            box-shadow: 0 0 20px rgba(140, 80, 255, 0.3);
+        }
+        h2 {
+            text-align: center;
+            color: #8c50ff;
+            margin-top: 0;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            font-weight: 900;
+        }
+        .toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 12px 0;
+            padding: 15px;
+            background: #1e1e24;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        .toggle:hover { background: #25252d; }
+        .switch {
+            width: 46px;
+            height: 24px;
+            background: #444;
+            border-radius: 24px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .switch.active { background: #8c50ff; }
+        .switch::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: 0.3s;
+        }
+        .switch.active::after { left: 24px; }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h2>VESTA MOBILE</h2>
+        
+        <div class="toggle">
+            <span>Aimbot</span>
+            <div class="switch active" onclick="this.classList.toggle('active')"></div>
+        </div>
+        
+        <div class="toggle">
+            <span>Wallhack (ESP)</span>
+            <div class="switch active" onclick="this.classList.toggle('active')"></div>
+        </div>
+
+        <div class="toggle">
+            <span>Triggerbot</span>
+            <div class="switch" onclick="this.classList.toggle('active')"></div>
+        </div>
+    </div>
+</body>
+</html>
